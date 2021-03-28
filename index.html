@@ -234,13 +234,20 @@
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                     <h3 class="section-subheading text-muted">Have any questions? Shoot us a message!</h3>
                 </div>
-                <form id="my-form" action="https://formspree.io/f/xoqyargv" method="POST">
-                  <label>Email:</label>
-                  <input type="email" name="email" />
-                  <label>Message:</label>
-                  <input type="text" name="message" />
-                  <button id="my-form-button">Submit</button>
-                  <p id="my-form-status"></p>
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xoqyargv" method="post">
+                  <fieldset class="form-fields" id="fs-frm-inputs">
+                    <div class="form-group">
+                      <input type="text" name="name" id="full-name" placeholder="Full Name..." required="true">
+                      <input type="email" name="email" id="email-address" placeholder="Email Address..." required="true">
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-group-textarea" rows="5" name="message" id="message" placeholder="Message." required=""></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                  </fieldset>
+                  <div class="text-center">
+                      <input class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" type="submit" value="Send Message">
+                  </div>
                 </form>
             </div>
         </section>
@@ -453,26 +460,4 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
-    <script>
-        var form = document.getElementById("my-form");
-
-        async function handleSubmit(event) {
-          event.preventDefault();
-          var status = document.getElementById("my-form-status");
-          var data = new FormData(event.target);
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-          }).then(response => {
-            status.innerHTML = "Thanks for your submission!";
-            form.reset()
-          }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-          });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
 </html>
