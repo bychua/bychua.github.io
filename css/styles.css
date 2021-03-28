@@ -502,17 +502,6 @@ mark,
   color: #6c757d;
 }
 
-.fade-section {
-opacity: 0;
-transform: translate(0, 10vh);
-transition: all 4s;
-}
-
-.fade-section.visible {
-opacity: 1;
-transform: translate(0, 0);
-}
-
 code {
   font-size: 87.5%;
   color: #e83e8c;
@@ -2931,6 +2920,17 @@ input[type=submit].btn-block,
 input[type=reset].btn-block,
 input[type=button].btn-block {
   width: 100%;
+}
+
+.fade-section {
+opacity: 0;
+transform: translate(0, 10vh);
+transition: all 4s;
+}
+
+.fade-section.visible {
+opacity: 1;
+transform: translate(0, 0);
 }
 
 .fade {
