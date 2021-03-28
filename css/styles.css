@@ -502,6 +502,17 @@ mark,
   color: #6c757d;
 }
 
+.fade {
+opacity: 0;
+transform: translate(0, 10vh);
+transition: all 1s;
+}
+
+.fade.visible {
+opacity: 1;
+transform: translate(0, 0);
+}
+
 code {
   font-size: 87.5%;
   color: #e83e8c;

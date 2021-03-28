@@ -30,6 +30,20 @@
         }
     });
 
+    $(document).on("scroll", function() {
+      var pageTop = $(document).scrollTop();
+      var pageBottom = pageTop + $(window).height();
+      var fadeSections = $(".fade");
+
+      for (var i = 0; i < fadeSections.length; i++) {
+        var fade = fadeSections[i];
+
+        if ($(fade).position().top < pageBottom) {
+          $(fade).addClass("visible");
+        }
+      }
+    });
+
     // Closes responsive menu when a scroll trigger link is clicked
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
