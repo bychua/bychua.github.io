@@ -10178,6 +10178,10 @@ header.masthead .masthead-heading {
   position: relative;
   display: block;
   margin: 0 auto;
+  transition: transform .7s ease-in-out;
+}
+#portfolio .portfolio-item .portfolio-link:hover {
+  transform: rotate(2deg);
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
