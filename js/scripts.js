@@ -33,7 +33,7 @@
     $(document).on("scroll", function() {
       var pageTop = $(document).scrollTop();
       var pageBottom = pageTop + $(window).height();
-      var fadeSections = $(".fade");
+      var fadeSections = $(".fade-section");
 
       for (var i = 0; i < fadeSections.length; i++) {
         var fade = fadeSections[i];

@@ -502,13 +502,13 @@ mark,
   color: #6c757d;
 }
 
-.fade {
+.fade-section {
 opacity: 0;
 transform: translate(0, 10vh);
-transition: all 1s;
+transition: all 4s;
 }
 
-.fade.visible {
+.fade-section.visible {
 opacity: 1;
 transform: translate(0, 0);
 }
